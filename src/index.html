@@ -26,21 +26,30 @@
         <div class="form-holder">
             <h3 class="heading-m">Enter your details below</h3>
             <form>
-                <input type="radio" id="metric" name="unit" value="metric" checked>
-                <label for="metric" class="body-m-bold">Metric</label>
-                <input type="radio" id="imperial" name="unit" value="imperial">
-                <label for="imperial" class="body-m-bold">Imperial</label>
+                <div class="radio-select">
+                    <div class="radio-metric">
+                        <input type="radio" id="metric" name="unit" value="metric" checked>
+                        <label for="metric" class="body-m-bold">Metric</label>
+                    </div>
+                    <div class="radio-imperial">
+                        <input type="radio" id="imperial" name="unit" value="imperial">
+                        <label for="imperial" class="body-m-bold">Imperial</label>
+                    </div>
+                    
+                   
+                </div>
+               
                 <fieldset>
                     <legend class="body-s">Height:</legend>
                     <div class="height-metric">
-                        <input type="number" id="height-cm" name="height-cm" min="30" max="300">
+                        <input class="heading-m" type="number" id="height-cm" name="height-cm" min="1" max="300">
                         <label for="height-cm" class="heading-m">cm</label>
                     </div>
                 </fieldset>
                 <fieldset>
                     <legend class="body-s">Weight:</legend>
                     <div class="weight-metric">
-                        <input type="number" id="weight-kg" name="weight-kg" min="1" max="400">
+                        <input class="heading-m" type="number" id="weight-kg" name="weight-kg" min="1" max="400">
                         <label for="weight-kg" class="heading-m">kg</label>
                     </div>
                 </fieldset>

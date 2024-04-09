@@ -18,11 +18,15 @@ function displayForm(measure) {
     let weightImperialDOM = document.querySelector('.weight-imperial');
 
     if (measure === 'metric') {
+        document.querySelector('.height-fieldset').style.gridArea = '2/1/3/7'
+        document.querySelector('.weight-fieldset').style.gridArea = '2/7/3/13'
         heightMetricDOM.style.display = 'flex';
         weightMetricDOM.style.display = 'flex';
         heightImperialDOM.style.display = 'none';
         weightImperialDOM.style.display = 'none';
     } else {
+        document.querySelector('.height-fieldset').style.gridArea = '2/1/3/13'
+        document.querySelector('.weight-fieldset').style.gridArea = '3/1/4/13'
         heightMetricDOM.style.display = 'none';
         weightMetricDOM.style.display = 'none';
         heightImperialDOM.style.display = 'flex';

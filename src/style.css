@@ -110,7 +110,7 @@ body {
     padding: 20px;
     background-color: var(--white);
     border-radius: 16px;
-    box-shadow: 32px 16px 56px #8faecf4b;
+    box-shadow: 16px 32px 56px #8faecf4b;
 }
 
 form {
@@ -187,10 +187,20 @@ fieldset>div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 24px;
+}
+
+.height-imperial,
+.weight-imperial {
+    display: none;
 }
 
 .height-metric,
-.weight-metric {
+.weight-metric,
+.ft-height,
+.in-height,
+.st-weight,
+.lbs-weight {
     border: 1px solid var(--borders);
     height: 69px;
     border-radius: 12px;
@@ -201,7 +211,11 @@ fieldset>div {
 }
 
 .height-metric:has(input:focus),
-.weight-metric:has(input:focus) {
+.weight-metric:has(input:focus),
+.ft-height:has(input:focus),
+.in-height:has(input:focus),
+.st-weight:has(input:focus),
+.lbs-weight:has(input:focus) {
     border-color: var(--blue);
 }
 
@@ -263,47 +277,51 @@ fieldset label {
 }
 
 .tips {
-    background: rgb(214, 230, 254);
-    background: linear-gradient(143deg, #D6e6fe 0%, rgba(214, 252, 254, 0) 100%);
+    background: linear-gradient(290deg, #d6e6feb7 0%, rgba(214, 252, 254, 0) 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
     padding: 60px 24px;
 }
-.tips >div{
+
+.tips>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
 }
-.tips >div>img{
+
+.tips>div>img {
     height: 64px;
     width: 64px;
 }
 
-.limitations{
+.limitations {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 24px;
 }
 
-.limitation-text{
+.limitation-text {
     display: flex;
     flex-direction: column;
     gap: 32px;
     text-align: center;
 }
-.limitation-card{
+
+.limitation-card {
     display: flex;
     flex-direction: column;
     gap: 16px;
     padding: 24px;
-   box-shadow: 32px 16px 56px #8faecf3d;
-   border-radius: 16px;
+    box-shadow: 16px 32px 56px #8faecf3d;
+    border-radius: 16px;
+    background-color: var(--white);
 }
-.card-title{
+
+.card-title {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -311,7 +329,35 @@ fieldset label {
 }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 690px) {
+
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 65px);
+        gap: 10px;
+        align-items: start;
+    }
+
+    .text-hero {
+      height: min(640px, 100%);
+        grid-area: 1/1/10/13;
+    }
+
+    .form-holder {
+        margin: 0px 39px;
+        padding: 32px;
+        grid-area: 6/1/12/13;
+    }
+
+    .radio-select {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media only screen and(min-width:1040px) {
     .heading-xl {
         font-size: 64px;
         font-weight: 600;

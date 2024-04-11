@@ -1,4 +1,7 @@
 import './style.css';
+import * as BMI from './BMI.mjs';
+import * as Converter  from './Converter.mjs';
+import * as IdealWeight from './IdealWeight.mjs'
 
 let rMetric = document.querySelector('.radio-metric>input');
 let rImperial = document.querySelector('.radio-imperial>input');
@@ -10,6 +13,10 @@ rMetric.addEventListener('click', () => {
 rImperial.addEventListener('click', () => {
     displayForm('imperial')
 });
+
+
+
+
 
 function displayForm(measure) {
     let heightMetricDOM = document.querySelector('.height-metric');

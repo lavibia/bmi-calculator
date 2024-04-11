@@ -1,5 +1,4 @@
 import * as Converter from './Converter.mjs'
-
 export function getBMIMetric(heightInCm, weightInKg) {
     let heightInMeters = Converter.heightInMeters(heightInCm)
     let bmi = weightInKg / (heightInMeters * heightInMeters);
@@ -30,4 +29,5 @@ export function getWeightCategory(bmi) {
     }
     return 'obese'
 }
+
 console.log(getBMIMetric(185,80));

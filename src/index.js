@@ -15,9 +15,22 @@ rImperial.addEventListener('click', () => {
 });
 
 
+//dispalyMetricBmiInfo(185,80)
+// displayImperialBmiInfo(5,11,11,4)
 
+function dispalyMetricBmiInfo(heightInCm, weightInKg){
+    let bmi = BMI.getBMIMetric(heightInCm, weightInKg);
+    document.querySelector('.result>h2').textContent=bmi;
 
-
+    document.querySelector('.result>p').innerHTML=`Your BMI suggests you're ${BMI.getWeightCategory(bmi)}.
+    Your ideal weight is between <b> ${IdealWeight.getMetricIdealWeight(Converter.heightInMeters(heightInCm))} <b>.`;
+}
+function displayImperialBmiInfo(heightInFeet, heightInInch, weightInStones, weightInPounds){
+    let bmi = BMI.getBMIImperial(heightInFeet,heightInInch,weightInStones, weightInPounds);
+    document.querySelector('.result>h2').textContent=bmi;
+    document.querySelector('.result>p').innerHTML=`Your BMI suggests you're ${BMI.getWeightCategory(bmi)}.
+    Your ideal weight is between <b> ${IdealWeight.getImperialIdealWeight(heightInFeet,heightInInch)} <b>.`;
+}
 function displayForm(measure) {
     let heightMetricDOM = document.querySelector('.height-metric');
     let weightMetricDOM = document.querySelector('.weight-metric');

@@ -1,4 +1,4 @@
-import { wMetricToImperial } from "./Converter.mjs";
+import { wMetricToImperial, heightInMeters,hImperialToMetric } from "./Converter.mjs";
 
 function minIdealWeight(heightInMeters) {
     //calculate min weight using a BMI of 18.5
@@ -15,8 +15,9 @@ export function getMetricIdealWeight(heightInMeters) {
     return `${minIdealWeight(heightInMeters)}kgs - ${maxIdealWeight(heightInMeters)}kgs`
 }
 
-export function getImperialIdealWeight(heightInMeters) {
-    return `${wMetricToImperial(minIdealWeight(heightInMeters))} - ${wMetricToImperial(maxIdealWeight(heightInMeters))}`
+export function getImperialIdealWeight(heightInFeet, heightInInch) {
+    let heightInMeter=heightInMeters(hImperialToMetric(heightInFeet,heightInInch))
+    return `${wMetricToImperial(minIdealWeight(heightInMeter))} - ${wMetricToImperial(maxIdealWeight(heightInMeter))}`
 }
 // console.log(getMetricIdealWeight(1.85));
 // console.log(getImperialIdealWeight(1.85));

@@ -72,6 +72,10 @@ body {
     justify-content: space-around;
 }
 
+.arrow {
+    display: none;
+}
+
 .hero {
     width: 100%;
     display: flex;
@@ -317,7 +321,7 @@ fieldset label {
     flex-direction: column;
     gap: 16px;
     padding: 24px;
-    box-shadow: 16px 32px 56px #8faecf3d;
+    box-shadow: 16px 32px 56px #8faecf50;
     border-radius: 16px;
     background-color: var(--white);
 }
@@ -361,7 +365,8 @@ fieldset label {
     .text-hero>h1 {
         grid-area: 2/2/4/4;
     }
-    .text-hero>p{
+
+    .text-hero>p {
         grid-area: 4/1/6/5;
     }
 
@@ -439,25 +444,57 @@ fieldset label {
         margin-top: 32px;
     }
 
-    .tips>div{
+    .tips>div {
         height: fit-content;
         display: grid;
         grid-template-columns: 100px 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 0px;
     }
-    .tips>div>img{
-        grid-row:1/ span 3;
+
+    .tips>div>img {
+        grid-row: 1/ span 3;
         grid-column: 1/2;
         align-self: center;
     }
-    .limitations{
+
+    .limitations {
         display: grid;
-        
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 60px);
+        column-gap: 15px;
+        row-gap: 24px;
     }
+
+    .limitation-text {
+        grid-area: 2/1/4/13;
+    }
+
+    .gender {
+        grid-area: 4/1/7/7;
+    }
+
+    .age {
+        grid-area: 4/7/7/13;
+    }
+
+    .muscle {
+        grid-area: 7/1/10/7;
+    }
+
+    .pregnancy {
+        grid-area: 7/7/10/13;
+    }
+
+    .race {
+        grid-area: 10/4/13/10;
+    }
+
+
+
 }
 
-@media only screen and(min-width:1040px) {
+@media only screen and (min-device-width:850px) {
     .heading-xl {
         font-size: 64px;
         font-weight: 600;
@@ -501,4 +538,15 @@ fieldset label {
         line-height: 150%;
         color: var(--dark-electric-blue);
     }
+
+    #result-arrow,
+    #limitations-arrow {
+        display: block;
+    }
+
+    body {
+        background-color: #253347;
+    }
+
+
 }

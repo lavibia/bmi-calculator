@@ -89,6 +89,7 @@
 
     </div>
     <div class="your-result">
+        <img src='<%=require("./assets/pattern-curved-line-left.svg")%>' alt="arrow pointing to about the result section" class="arrow" id="result-arrow">
         <div class="img-holder"><img src='<%=require("./assets/image-man-eating.webp")%>' alt="man eating sushi"></div>
 
         <h2 class="heading-l">What your BMI result means</h2>
@@ -120,13 +121,14 @@
         </div>
     </div>
     <div class="limitations">
+        <img src='<%=require("./assets/pattern-curved-line-right.svg")%>' alt="arrow pointing to limitation cards" class="arrow" id="limitations-arrow">
         <div class="limitation-text">
             <h2 class="heading-l">Limitations of BMI</h2>
             <p class="body-m"> Although BMI is often a practical indicator of healthy weight, it is not suited for
                 every person. Specific groups should carefully consider their BMI outcomes, and in
                 certain cases, the measurement may not be beneficial to use.</p>
         </div>
-        <div class="limitation-card">
+        <div class="limitation-card gender">
             <div class="card-title">
                 <img src='<%=require("./assets/icon-gender.svg")%>' alt="gender icon">
                 <h3 class="heading-s">Gender</h3>
@@ -134,7 +136,7 @@
             <p class="body-m">The development and body fat composition of girls and boys vary with age. Consequently,
                 a child's age and gender are considered when evaluating their BMI.</p>
         </div>
-        <div class="limitation-card">
+        <div class="limitation-card age">
             <div class="card-title">
                 <img src='<%=require("./assets/icon-age.svg")%>' alt="age icon">
                 <h3 class="heading-s">Age</h3>
@@ -142,7 +144,7 @@
             <p class="body-m">In aging individuals, increased body fat and muscle loss may cause BMI to underestimate
                 body fat content.</p>
         </div>
-        <div class="limitation-card">
+        <div class="limitation-card muscle">
             <div class="card-title">
                 <img src='<%=require("./assets/icon-muscle.svg")%>' alt="muscle icon">
                 <h3 class="heading-s">Muscle</h3>
@@ -150,7 +152,7 @@
             <p class="body-m">BMI may misclassify muscular individuals as overweight or obese, as it doesn't
                 differentiate muscle from fat.</p>
         </div>
-        <div class="limitation-card">
+        <div class="limitation-card pregnancy">
             <div class="card-title">
                 <img src='<%=require("./assets/icon-pregnancy.svg")%>' alt="baby icon">
                 <h3 class="heading-s">Pregnancy</h3>
@@ -159,7 +161,7 @@
                 healthy pre-pregnancy BMI is advisable to minimise health risks for both mother
                 and child.</p>
         </div>
-        <div class="limitation-card">
+        <div class="limitation-card race">
             <div class="card-title">
                 <img src='<%=require("./assets/icon-race.svg")%>' alt="human icon">
                 <h3 class="heading-s">Race</h3>

@@ -317,7 +317,7 @@ fieldset label {
     flex-direction: column;
     gap: 16px;
     padding: 24px;
-    box-shadow: 16px 32px 56px #8faecf3d;
+    box-shadow: 16px 32px 56px #8faecf50;
     border-radius: 16px;
     background-color: var(--white);
 }
@@ -453,8 +453,32 @@ fieldset label {
     }
     .limitations{
         display: grid;
-        
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 60px);
+    column-gap: 15px;
+    row-gap: 24px;
     }
+    .limitation-text{
+        grid-area: 2/1/4/13;
+    }
+    .gender{
+        grid-area: 4/1/7/7;
+    }
+    .age{
+        grid-area: 4/7/7/13;
+    }
+    .muscle{
+        grid-area: 7/1/10/7;
+    }
+    .pregnancy{
+        grid-area: 7/7/10/13;
+    }
+    .race{
+        grid-area: 10/4/13/10;
+    }
+
+
+
 }
 
 @media only screen and(min-width:1040px) {

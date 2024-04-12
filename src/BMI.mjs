@@ -5,18 +5,15 @@ export function getBMIMetric(heightInCm, weightInKg) {
     console.log(bmi)
     return Math.round(bmi * 10) / 10
 }
-export function getBMIImperial(heightInFeet, heightInInch, weightInStones, weightInPounds){
-    let height =Converter.hImperialToMetric(heightInFeet,heightInInch);
+export function getBMIImperial(heightInFeet, heightInInch, weightInStones, weightInPounds) {
+    let height = Converter.hImperialToMetric(heightInFeet, heightInInch);
 
     console.log(height);
-    
-    let weight = Converter.wImperialToMetric(weightInStones,weightInPounds);
+
+    let weight = Converter.wImperialToMetric(weightInStones, weightInPounds);
     console.log(weight);
     return getBMIMetric(height, weight);
 }
-
-console.log(getBMIImperial(5,11,11,4))
-
 export function getWeightCategory(bmi) {
     if (bmi < 18.5) {
         return 'underweight';
@@ -29,5 +26,3 @@ export function getWeightCategory(bmi) {
     }
     return 'obese'
 }
-
-console.log(getBMIMetric(185,80));

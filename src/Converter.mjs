@@ -16,8 +16,3 @@ export function heightInMeters(heightInCm) {
 export function hImperialToMetric(heightInFeet, heightInInch) {
     return (heightInFeet * 30.48) + (heightInInch * 2.54)
 }
-
-console.log(hImperialToMetric(5, 11));
-console.log(heightInMeters(160))
-console.log(wMetricToImperial(80))
-console.log(wImperialToMetric(12, 8))

@@ -10,14 +10,10 @@ function maxIdealWeight(heightInMeters) {
     let maxWeight = 24.9 * (heightInMeters * heightInMeters)
     return Math.round(maxWeight * 10) / 10
 }
-
 export function getMetricIdealWeight(heightInMeters) {
     return `${minIdealWeight(heightInMeters)}kgs - ${maxIdealWeight(heightInMeters)}kgs`
 }
-
 export function getImperialIdealWeight(heightInFeet, heightInInch) {
     let heightInMeter=heightInMeters(hImperialToMetric(heightInFeet,heightInInch))
     return `${wMetricToImperial(minIdealWeight(heightInMeter))} - ${wMetricToImperial(maxIdealWeight(heightInMeter))}`
 }
-// console.log(getMetricIdealWeight(1.85));
-// console.log(getImperialIdealWeight(1.85));

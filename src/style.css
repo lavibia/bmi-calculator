@@ -10,14 +10,14 @@
     font-size: 48px;
     font-weight: 600;
     line-height: 110%;
-    letter-spacing: -5%;
+    letter-spacing: -3px;
 }
 
 .heading-l {
     font-size: 32px;
     font-weight: 600;
     line-height: 110%;
-    letter-spacing: -5%;
+    letter-spacing: -2px;
 }
 
 .heading-m {
@@ -265,7 +265,9 @@ fieldset label {
 }
 
 .result * {
-
+    color: white;
+}
+.result>p.body-s{
     color: white;
 }
 
@@ -494,7 +496,7 @@ fieldset label {
 
 }
 
-@media only screen and (min-device-width:850px) {
+@media only screen and (min-device-width:1050px) {
     .heading-xl {
         font-size: 64px;
         font-weight: 600;
@@ -538,15 +540,83 @@ fieldset label {
         line-height: 150%;
         color: var(--dark-electric-blue);
     }
-
+    body{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     #result-arrow,
     #limitations-arrow {
         display: block;
     }
-
-    body {
-        background-color: #253347;
+    .hero{
+        height: 100vh;
+        margin:0px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 10px;
+        column-gap: 20px;
     }
+    .text-hero{
+        grid-area: 1/1/11/10;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(7, 75px);
+        gap: 10px;
+        padding: 0px 80px;
+height: 100%;
+        text-align: start;
+    }
+    .text-hero img{
+        justify-self: start;
+        margin: 0;
+        padding: 0;
+        height: 65px;
+        width: 65px;
+        grid-area: 2/1/3/2;
+    }
+    .text-hero h1{
+        grid-area: 4/1/6/6;
 
-
+    }
+    .text-hero p{
+        grid-area: 6/1/8/6;
+    }
+    .form-holder{
+        grid-area: 3/7/10/13;
+    }
+    
+    .your-result{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        column-gap: 0px;
+        height: 80vh;
+        row-gap: 0px;
+        padding: 0px 80px;
+    }
+    .your-result>img{
+        grid-area: 1/11/4/13;
+        align-self: flex-end;
+        z-index: 12;
+    }
+    .your-result>.img-holder{
+        margin: 0px;
+        grid-area: 2/1/8/7;
+        align-self: flex-end;
+    }
+    .img-holde>img{
+        width: 564px;
+        height: 533px;
+    }
+    .your-result>h2{
+        margin: 0;
+        padding: 0;
+        grid-area: 4/7/6/13;
+        align-self: center;
+    }
+    .your-result>p{
+        margin: 0;
+        padding: 0;
+        grid-area: 6/7/8/13;
+    }
 }

@@ -10,14 +10,14 @@
     font-size: 48px;
     font-weight: 600;
     line-height: 110%;
-    letter-spacing: -5%;
+    letter-spacing: -3px;
 }
 
 .heading-l {
     font-size: 32px;
     font-weight: 600;
     line-height: 110%;
-    letter-spacing: -5%;
+    letter-spacing: -2px;
 }
 
 .heading-m {
@@ -110,7 +110,7 @@ body {
     justify-content: space-between;
     gap: 20px;
     margin: 24px;
-    margin-top: -50%;
+    margin-top: -80%;
     padding: 20px;
     background-color: var(--white);
     border-radius: 16px;
@@ -265,7 +265,9 @@ fieldset label {
 }
 
 .result * {
-
+    color: white;
+}
+.result>p.body-s{
     color: white;
 }
 
@@ -494,7 +496,7 @@ fieldset label {
 
 }
 
-@media only screen and (min-device-width:850px) {
+@media only screen and (min-device-width:1100px) {
     .heading-xl {
         font-size: 64px;
         font-weight: 600;
@@ -538,14 +540,144 @@ fieldset label {
         line-height: 150%;
         color: var(--dark-electric-blue);
     }
-
+    body{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
     #result-arrow,
     #limitations-arrow {
         display: block;
     }
+    .hero{
+        height: 100vh;
+        margin:0px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        row-gap: 10px;
+        column-gap: 20px;
+    }
+    .text-hero{
+        grid-area: 1/1/11/10;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(7, 75px);
+        gap: 10px;
+        padding: 0px 80px;
+height: 100%;
+        text-align: start;
+    }
+    .text-hero img{
+        justify-self: start;
+        margin: 0;
+        padding: 0;
+        height: 65px;
+        width: 65px;
+        grid-area: 2/1/3/2;
+    }
+    .text-hero h1{
+        grid-area: 4/1/6/6;
 
-    body {
-        background-color: #253347;
+    }
+    .text-hero p{
+        grid-area: 6/1/8/6;
+    }
+    .form-holder{
+        grid-area: 3/7/10/13;
+    }
+    
+    .your-result{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(8, 65px);
+        column-gap: 0px;
+        column-gap: 24px;
+        row-gap: 10px;
+        padding: 0px 80px;
+    }
+    .your-result>img{
+        grid-area: 1/11/4/13;
+        align-self: flex-end;
+        z-index: 12;
+    }
+    .your-result>.img-holder{
+        margin: 0px;
+        grid-area: 2/1/9/7;
+        width: 100%;
+        align-self: flex-end;
+    }
+    .img-holder>img{
+        width: min(564px, 100%);
+    }
+    .your-result>h2{
+        margin: 0;
+        padding: 0;
+        grid-area: 4/8/6/13;
+        align-self: center;
+    }
+    .your-result>p{
+        margin: 0;
+        padding: 0;
+        grid-area: 6/8/9/13;
+    }
+
+    .tips{
+        margin: 125px 0px;
+        padding: 65px 80px;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    .tips>div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+    }
+    
+    .tips>div>img {
+        align-self: flex-start;
+        height: 64px;
+        width: 64px;
+    }
+    .limitations{
+        padding: 0px 80px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9 , 85px);
+        row-gap: 0px;
+        column-gap: 32px;
+    }
+    .limitations>*:not(.limitation-text){
+        align-self: center;
+    }
+    .limitation-text{
+        grid-area: 1/1/3/7;
+        text-align: left;
+    }
+    .limitations>img{
+        grid-area: 4/2/6/4;
+    }
+    .gender{
+        height: min(232px , 90%);
+        grid-area: 1/8/4/12;
+    }
+    .age{
+        height: min(184px, 90%);
+        grid-area: 4/5/7/9;
+    }
+    .muscle{
+        height: min(184px, 90%);
+        grid-area: 4/9/7/13;
+    }
+    .pregnancy{
+        height: min(232px , 90%);
+        grid-area: 7/3/10/7;
+    }
+    .race{
+        height: min(232px , 90%);
+        grid-area: 7/7/10/11;
     }
 
 

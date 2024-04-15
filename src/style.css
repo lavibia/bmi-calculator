@@ -250,24 +250,36 @@ fieldset label {
     height: fit-content;
     width: 100%;
 }
-
-.result {
+.blueDiv{
     background: rgb(52, 95, 246);
     background: linear-gradient(90deg, rgba(52, 95, 246, 1) 0%, rgba(88, 125, 255, 1) 100%);
     border-radius: 16px;
     width: 100%;
     height: 257px;
-    display: flex;
+}
+.hidden{
+    display: none !important;
+}
+.result {
+    display:flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
     padding: 32px;
 }
-
-.result * {
+.welcome{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+    gap: 10px;
+    padding: 32px;
+}
+.result *, .welcome * {
     color: white;
 }
-.result>p.body-s{
+.result>p.body-s,
+.welcome>p.body-s{
     color: white;
 }
 
@@ -400,19 +412,21 @@ fieldset label {
     .weight-fieldset {
         grid-area: 2/7/3/13;
     }
-
-    .result {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 5px;
-        align-items: center;
+.blueDiv{
         width: 100%;
         height: 150px;
         border-bottom-left-radius: 16px;
         border-top-left-radius: 16px;
         border-bottom-right-radius: 199px;
         border-top-right-radius: 199px;
+}
+    .result {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 5px;
+        align-items: center;
+        
     }
 
     .result>h6 {

@@ -16,7 +16,8 @@ rImperial.addEventListener('click', () => {
 
 
 //dispalyMetricBmiInfo(185,80)
-// displayImperialBmiInfo(5,11,11,4)
+showResultContainer();
+displayImperialBmiInfo(5,11,11,4)
 
 function dispalyMetricBmiInfo(heightInCm, weightInKg){
     let bmi = BMI.getBMIMetric(heightInCm, weightInKg);
@@ -30,6 +31,10 @@ function displayImperialBmiInfo(heightInFeet, heightInInch, weightInStones, weig
     document.querySelector('.result>h2').textContent=bmi;
     document.querySelector('.result>p').innerHTML=`Your BMI suggests you're ${BMI.getWeightCategory(bmi)}.
     Your ideal weight is between <b> ${IdealWeight.getImperialIdealWeight(heightInFeet,heightInInch)} <b>.`;
+}
+function showResultContainer(){
+    document.querySelector('.form-holder>.result').classList.remove('hidden');
+    document.querySelector('.form-holder>.welcome').classList.add('hidden');
 }
 function displayForm(measure) {
     let heightMetricDOM = document.querySelector('.height-metric');

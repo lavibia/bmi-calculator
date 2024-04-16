@@ -6,7 +6,7 @@ export function wMetricToImperial(weightInKg) {
 }
 export function wImperialToMetric(weightInStones, weightInPounds) {
     let imperialWeight = weightInStones + (weightInPounds / 14)
-    let weightInKg = imperialWeight / 0.157573
+    let weightInKg = imperialWeight /1.57573
     return Math.round(weightInKg);
 }
 export function heightInMeters(heightInCm) {

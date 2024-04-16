@@ -174,12 +174,20 @@ input[type="radio"]::before {
 input[type="radio"]:checked::before {
     transform: scale(1);
 }
+.error{
+        display: none;
+    position: relative;
+    bottom: 0;
+        width: 100%;
+        color: rgb(197, 38, 38);
+      
+}
 
 fieldset {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 10px;
     border: none;
 }
 
